@@ -18,6 +18,12 @@ fn ret_fun()-> i32 {
     666
 }
 
+// parameterized return type function
+
+fn par_retu_fun(n: i32)-> i32 {
+   n+1
+}
+
 fn main() {
 
     another_function();
@@ -26,4 +32,7 @@ fn main() {
     
     let p= ret_fun();
     println!("this is return type fun value {}",p);
+
+    let q = par_retu_fun( 900);
+    println!("the value of q is {}",q);
 }
