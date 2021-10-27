@@ -41,4 +41,21 @@ fn main() {
      let gf= 'a';
      println!("{}",gf);
 
+    // tupple : it is way of grouping of numbers with different data types 
+    let tup: (i32, f32, u32)= (22, 3.3, 3);
+    let (x, y, z) = tup;
+    println!("the value of x y and z is  {} {} {}",x, y, z);
+
+
+    // Array type
+
+    let aa = [1,2,3,4,5];
+    // accessing array element
+
+    let _fir = aa[0];
+    let _sec = aa[1];
+    println!("{}",_fir);
+    println!("{}",_sec);
+    
+
 }
