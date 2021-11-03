@@ -1,2 +1,32 @@
+const has must data types and it is unmutable 
+let variable has no need to spacify data types and it is mutable
 
-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
+    // by default variable are immutable it means
+    // mutable means : it's value can be changed externally
+    // immutable mean: it's value can't be changed externally
+
+scaler : it has four types integer, float, boolean, character
+
+vector has three things 
+1. data
+2. lengh
+3. capacity
+these are called stack memory 
+
+and these data is store in heap memory 
+
+tupple : it is way of grouping of numbers with different data types 
+
+Borrowing allows to have multiple references to a single resource but still obeys to have a "single owner".
+
+When a function transfers its control over a variable/value
+ to another function temporarily, for a while, it is called borrowing. 
+
+ mod keyword declare a new module
+ by default all function is public
+ use keyword is used to import module
+
+ A module forms a hierarchical structure so that the project becomes more understandable. 
+ Rust module system is used to split the multiple files in such a way that not everything
+lies in the src/lib.rs or src/main.rs file.
+

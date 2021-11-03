@@ -3,7 +3,7 @@ fn main() {
         println!("continue printing...");
     }
 
-    for temp_var in lower value.. max value;
+    //for temp_var in lower value.. max value;
 
     for x in 1..11{
         if x==5{
@@ -12,7 +12,7 @@ fn main() {
         println!("the value of x is : {}",x);
     }
 
-    loop is also called while loop 
+    //loop is also called while loop 
     let mut i= 1;
     loop {
         println!("this is the value of i {}",i);

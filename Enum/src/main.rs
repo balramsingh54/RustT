@@ -13,6 +13,11 @@ let C++= computer_language::C++; // this is called instance of varient of C++
 let java = coputer_language::Java; // this is called instance of varient of Java 
 
 
+fn language_type(language_name::computer_language)
+
+
 fn main() {
     println!("Hello, world!");
+
+    language_type(computer_language::C++);
 }
