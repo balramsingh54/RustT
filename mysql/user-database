@@ -1,0 +1,709 @@
+
+
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ cd Desktop
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop$ mkdir mysql
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop$ cd mysql/
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git init
+Initialized empty Git repository in /home/balram/Desktop/mysql/.git/
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git add .
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   notes
+
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git commit -m"Initial commit"
+[master (root-commit) 4ea5427] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 notes
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git remote add origin git remote add origin https://github.com/balramsingh54/mysql.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git remote set-url origin https://github.com/username/repository.git
+fatal: No such remote 'origin'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git remote set-url origin https://github.com/balramsingh54/mysql.git
+fatal: No such remote 'origin'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql
+ERROR 1045 (28000): Access denied for user 'balram'@'localhost' (using password: NO)
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p  
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql --version
+mysql  Ver 8.0.26-0ubuntu0.20.04.3 for Linux on x86_64 ((Ubuntu))
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop/mysql$ cd ..
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~/Desktop$ cd ..
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ 
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql
+ERROR 1045 (28000): Access denied for user 'balram'@'localhost' (using password: NO)
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ --user=mysql
+--user=mysql: command not found
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo vim
+[sudo] password for balram: 
+sudo: vim: command not found
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo vim
+sudo: vim: command not found
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo /etc/init.d/mysql stop
+Stopping mysql (via systemctl): mysql.service.
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo mysqld_safe --skip-grant-tables &
+[1] 12497
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ 2021-11-05T07:00:23.695397Z mysqld_safe Logging to '/var/log/mysql/error.log'.
+2021-11-05T07:00:23.697784Z mysqld_safe Directory '/var/run/mysqld' for UNIX socket file don't exists.
+
+[1]+  Exit 1                  sudo mysqld_safe --skip-grant-tables
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -uroot
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ use mysql;
+
+Command 'use' not found, did you mean:
+
+  command 'ase' from deb ase (3.19.0-1)
+  command 'fuse' from deb fuse-emulator-gtk (1.5.7+dfsg1-3)
+  command 'fuse' from deb fuse-emulator-sdl (1.5.7+dfsg1-3)
+  command 'nse' from deb ns2 (2.35+dfsg-3build1)
+  command 'muse' from deb muse (3.0.2+ds1-2build1)
+
+Try: sudo apt install <deb name>
+
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ update user set authentication_string=PASSWORD("mynewpassword") where User='root';
+bash: syntax error near unexpected token `('
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo /etc/init.d/mysql start
+Starting mysql (via systemctl): mysql.service.
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ 
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ use mysql
+
+Command 'use' not found, did you mean:
+
+  command 'ase' from deb ase (3.19.0-1)
+  command 'fuse' from deb fuse-emulator-gtk (1.5.7+dfsg1-3)
+  command 'fuse' from deb fuse-emulator-sdl (1.5.7+dfsg1-3)
+  command 'muse' from deb muse (3.0.2+ds1-2build1)
+  command 'nse' from deb ns2 (2.35+dfsg-3build1)
+
+Try: sudo apt install <deb name>
+
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo apt uninstall mysql
+E: Invalid operation uninstall
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysqladmin -u root password NEWPASSWORD
+mysqladmin: connect to server at 'localhost' failed
+error: 'Access denied for user 'root'@'localhost''
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ ^C
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo -u root -p
+sudo: option requires an argument -- 'p'
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-T timeout] [-u user] file ...
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.26-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show table;l
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+    -> ^Z
+[1]+  Stopped                 sudo mysql -u root -p
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.26-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show tables
+    -> 
+    -> ^Z
+[2]+  Stopped                 sudo mysql -u root -p
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 8.0.26-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+
+mysql> select user from mysql.user;  
++------------------+
+| user             |
++------------------+
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+5 rows in set (0.00 sec)
+
+mysql> create user balram@localhost identified by 'jtp12345';  
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> create user peter@localhost identified by 'root';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> create user balram@localhost identified by 'root';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> DROP USER martin@localhost;  
+ERROR 1396 (HY000): Operation DROP USER failed for 'martin'@'localhost'
+mysql> mysql> select user from mysql.user;  
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql> select user from mysql.user' at line 1
+mysql> select user from mysql.user; 
++------------------+
+| user             |
++------------------+
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+5 rows in set (0.00 sec)
+
+mysql> create user balram@localhost identified by 'root';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+
+mysql> create database DB1;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use DB1;
+Database changed
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> select database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> SELECT database();
++------------+
+| database() |
++------------+
+| DB1        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT user FROM user;  
+ERROR 1146 (42S02): Table 'DB1.user' doesn't exist
+mysql> select database();
++------------+
+| database() |
++------------+
+| DB1        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> show tables
+    -> ;
+Empty set (0.00 sec)
+
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> DESC user;
+ERROR 1146 (42S02): Table 'DB1.user' doesn't exist
+mysql> DESC DB1;
+ERROR 1146 (42S02): Table 'DB1.DB1' doesn't exist
+mysql> SHOW batabases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'batabases' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use sys;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> select database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select database();
++------------+
+| database() |
++------------+
+| sys        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> use D
+ERROR 1049 (42000): Unknown database 'D'
+mysql> use DB1;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| DB1        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> create user ram@hostname identified by 'balram';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> show password;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'password' at line 1
+mysql> show password();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'password()' at line 1
+mysql> exit
+Bye
+balram@balram-VivoBook-ASUSLaptop-X540MAR-X543MA:~$ sudo mysql -u root -p
+[sudo] password for balram: 
+Sorry, try again.
+[sudo] password for balram: 
+Sorry, try again.
+[sudo] password for balram: 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.26-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create user balram@hostname identified by 'Balram@54';
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> create user user@hostname identified by 'Balram@54';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| balram           |
+| user             |
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+7 rows in set (0.00 sec)
+
+mysql> create user suman@hostname identified by 'Balram@54';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| balram           |
+| suman            |
+| user             |
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+8 rows in set (0.00 sec)
+
+mysql> create  user sweet@hostname identified by 'Balram@54';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| balram           |
+| suman            |
+| sweet            |
+| user             |
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+9 rows in set (0.00 sec)
+
+mysql> drop user sweet;
+ERROR 1396 (HY000): Operation DROP USER failed for 'sweet'@'%'
+mysql> drop user 'sweet';
+ERROR 1396 (HY000): Operation DROP USER failed for 'sweet'@'%'
+mysql> DROP user 'sweet';
+ERROR 1396 (HY000): Operation DROP USER failed for 'sweet'@'%'
+mysql> drop user sweet@hostname;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select user from mysql.user
+    -> ;
++------------------+
+| user             |
++------------------+
+| balram           |
+| suman            |
+| user             |
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+8 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> create databased DB2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databased DB2' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> create databases DB2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databases DB2' at line 1
+mysql> create database DB2;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> show databased like DB%;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databased like DB%' at line 1
+mysql> show databased like 'DB%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databased like 'DB%'' at line 1
+mysql> show databased like 'DB%'
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databased like 'DB%'' at line 1
+mysql> show databased like "DB%";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databased like "DB%"' at line 1
+mysql> show databases like "DB%";
++----------------+
+| Database (DB%) |
++----------------+
+| DB1            |
+| DB2            |
++----------------+
+2 rows in set (0.06 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.02 sec)
+
+mysql> create database DB3;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| DB3                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> drop database DB3;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.01 sec)
+
+mysql> use DB1;
+Database changed
+mysql> select database from mysql.user
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from mysql.user' at line 1
+mysql> select database();
++------------+
+| database() |
++------------+
+| DB1        |
++------------+
+1 row in set (0.01 sec)
+
+mysql> create table Balram (id int NOT NULL auto_increment, name varchar NOT NULL, age int  NOT NULL, PRIMARY KEY (id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT NULL, age int  NOT NULL, PRIMARY KEY (id))' at line 1
+mysql> create table Balram (id int NOT NULL auto_increment, name varchar(45) NOT NULL, age int  NOT NULL, PRIMARY KEY (id));
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balram        |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE Balram;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(45) | NO   |     | NULL    |                |
+| age   | int         | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> 
+mysql> DESCRIBE Balram;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(45) | NO   |     | NULL    |                |
+| age   | int         | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESCRIBE Balram;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(45) | NO   |     | NULL    |                |
+| age   | int         | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> alter table Balram add address varchar(45);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Balram;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int         | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(45) | NO   |     | NULL    |                |
+| age     | int         | NO   |     | NULL    |                |
+| address | varchar(45) | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+
+mysql> 
+
+
+
+
+
