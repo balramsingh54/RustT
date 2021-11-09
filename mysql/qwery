@@ -1,0 +1,290 @@
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.04 sec)
+
+mysql> show full tables;
++---------------+------------+
+| Tables_in_DB1 | Table_type |
++---------------+------------+
+| Balram        | BASE TABLE |
++---------------+------------+
+1 row in set (0.00 sec)
+
+mysql> rename Balram to BalramS
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Balram to BalramS' at line 1
+mysql> rename Balram TO BalramS
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Balram TO BalramS' at line 1
+mysql> RENAME Balram TO BalramSingh;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Balram TO BalramSingh' at line 1
+mysql> rename table Balram to Balramsingh
+    -> ;
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balramsingh   |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Balramsingh(id, name, age, address) values(1, 'balram', 23,'fazilnagar');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from Balramsingh
+    -> ;
++----+--------+-----+------------+
+| id | name   | age | address    |
++----+--------+-----+------------+
+|  1 | balram |  23 | fazilnagar |
++----+--------+-----+------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Balramsingh(id, name, age, address) values(1, 'balram2', 24,'fazilnagar');
+ERROR 1062 (23000): Duplicate entry '1' for key 'Balramsingh.PRIMARY'
+mysql> insert into Balramsingh(id, name, age, address) values(2, 'balram2', 24,'fazilnagar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Balramsingh(id, name, age, address) values(4, 'balram3', 24,'fazilnagar');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Balramsingh;
++----+---------+-----+------------+
+| id | name    | age | address    |
++----+---------+-----+------------+
+|  1 | balram  |  23 | fazilnagar |
+|  2 | balram2 |  24 | fazilnagar |
+|  4 | balram3 |  24 | fazilnagar |
++----+---------+-----+------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into Balramsingh(id, name, age, address) values(3, 'balram4', 25,'kushinagar');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Balramsingh;
++----+---------+-----+------------+
+| id | name    | age | address    |
++----+---------+-----+------------+
+|  1 | balram  |  23 | fazilnagar |
+|  2 | balram2 |  24 | fazilnagar |
+|  3 | balram4 |  25 | kushinagar |
+|  4 | balram3 |  24 | fazilnagar |
++----+---------+-----+------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE TABLE customer (    
+    ->     Id int PRIMARY KEY NOT NULL,     
+    ->     Name varchar(45) NOT NULL,     
+    ->     Product varchar(45) DEFAULT NULL,     
+    ->     Country varchar(25) DEFAULT NULL,     
+    ->     Year int NOT NULL    
+    -> ); 
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balramsingh   |
+| customer      |
++---------------+
+2 rows in set (0.02 sec)
+
+mysql> INSERT INTO customer ( Id, Name, Product, Country, Year)     
+    -> VALUES (1, 'Stephen', 'Computer', 'USA', 2015),     
+    -> (2, 'Joseph', 'Laptop', 'India', 2016),     
+    -> (3, 'John', 'TV', 'USA', 2016),    
+    -> (4, 'Donald', 'Laptop', 'England', 2015),    
+    -> (5, 'Joseph', 'Mobile', 'India', 2015),    
+    -> (6, 'Peter', 'Mouse', 'England', 2016);  
+Query OK, 6 rows affected (0.02 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show tables
+    -> ;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balramsingh   |
+| customer      |
++---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customer;
++----+---------+----------+---------+------+
+| Id | Name    | Product  | Country | Year |
++----+---------+----------+---------+------+
+|  1 | Stephen | Computer | USA     | 2015 |
+|  2 | Joseph  | Laptop   | India   | 2016 |
+|  3 | John    | TV       | USA     | 2016 |
+|  4 | Donald  | Laptop   | England | 2015 |
+|  5 | Joseph  | Mobile   | India   | 2015 |
+|  6 | Peter   | Mouse    | England | 2016 |
++----+---------+----------+---------+------+
+6 rows in set (0.00 sec)
+
+mysql> truncate table customer;
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balramsingh   |
+| customer      |
++---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customer;
+Empty set (0.00 sec)
+
+mysql> desc customer;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Id      | int         | NO   | PRI | NULL    |       |
+| Name    | varchar(45) | NO   |     | NULL    |       |
+| Product | varchar(45) | YES  |     | NULL    |       |
+| Country | varchar(25) | YES  |     | NULL    |       |
+| Year    | int         | NO   |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> drop table customer;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB1 |
++---------------+
+| Balramsingh   |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> desc table  Balramsingh;
++----+-------------+-------------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table       | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+-------------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | Balramsingh | NULL       | ALL  | NULL          | NULL | NULL    | NULL |    4 |   100.00 | NULL  |
++----+-------------+-------------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> select * from Balramsingh;
++----+---------+-----+------------+
+| id | name    | age | address    |
++----+---------+-----+------------+
+|  1 | balram  |  23 | fazilnagar |
+|  2 | balram2 |  24 | fazilnagar |
+|  3 | balram4 |  25 | kushinagar |
+|  4 | balram3 |  24 | fazilnagar |
++----+---------+-----+------------+
+4 rows in set (0.01 sec)
+
+mysql> alter table  Balramsingh drop column address;
+Query OK, 0 rows affected (0.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from Balramsingh;
++----+---------+-----+
+| id | name    | age |
++----+---------+-----+
+|  1 | balram  |  23 |
+|  2 | balram2 |  24 |
+|  3 | balram4 |  25 |
+|  4 | balram3 |  24 |
++----+---------+-----+
+4 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| DB1                |
+| DB2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.06 sec)
+
+mysql> create database DB3;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> use DB3;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| DB3        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> create table customer(id int(4), name varchar(50), city varchar(30), primary key (id));
+Query OK, 0 rows affected, 1 warning (0.13 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_DB3 |
++---------------+
+| customer      |
++---------------+
+1 row in set (0.01 sec)
+
+mysql> select * from customer;
+Empty set (0.01 sec)
+
+mysql> alter table customer add (age int(3));
+Query OK, 0 rows affected, 1 warning (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> desc table customer;
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table    | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | customer | NULL       | ALL  | NULL          | NULL | NULL    | NULL |    1 |   100.00 | NULL  |
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> insert into customer value(3, 'balram', 'fazilnagar', 1);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> desc table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> desc table customer;
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table    | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | customer | NULL       | ALL  | NULL          | NULL | NULL    | NULL |    1 |   100.00 | NULL  |
++----+-------------+----------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from table customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table customer' at line 1
+mysql> select * from customer;
++----+--------+------------+------+
+| id | name   | city       | age  |
++----+--------+------------+------+
+|  3 | balram | fazilnagar |    1 |
++----+--------+------------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into customer value(2, 'balram1', 'fazilnagar', 2);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into customer value(1, 'balram2', 'fazilnagar', 1);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from customer;
++----+---------+------------+------+
+| id | name    | city       | age  |
++----+---------+------------+------+
+|  1 | balram2 | fazilnagar |    1 |
+|  2 | balram1 | fazilnagar |    2 |
+|  3 | balram  | fazilnagar |    1 |
++----+---------+------------+------+
+3 rows in set (0.00 sec)
+
+mysql> 
